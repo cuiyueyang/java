@@ -3,7 +3,7 @@ package 基础概念;
 import java.text.DecimalFormat;
 
 /**
- * <p>Description: 保留两位小数</p>
+ * <p>Description: 数据类型 保留两位小数</p>
  * <p>@date 2021/10/27 10:33</p>
  *
  * @author cuiyy

@@ -1,7 +1,7 @@
 package 基础概念;
 
 /**
- * <p>Description: </p>
+ * <p>Description: 数据类型</p>
  * <p>@date 2022/6/7 16:24</p>
  *
  * @author cuiyy
