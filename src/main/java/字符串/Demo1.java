@@ -16,7 +16,7 @@ public class Demo1 {
         //3.indexOf() 获取str在字符串对象中第一次出现的位置/索引
         System.out.println(str.indexOf("a"));
         //4.substring() 截取字符串
-        System.out.println(str.substring(1,2));
+        System.out.println(str.substring(0,4));
 
         System.out.println("-----------------------");
 

@@ -14,6 +14,8 @@ import java.util.Date;
 public class Demo6 {
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private static DateTimeFormatter formatterDay = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
 
     public static LocalDateTime localDateToLocalDateTime(LocalDate localDate) {
         ZoneId zone = ZoneId.systemDefault();
@@ -25,8 +27,18 @@ public class Demo6 {
     }
 
     public static void main(String[] args) {
+
+        System.out.println(LocalDateTime.of(LocalDate.parse("2022-08-01", formatterDay), LocalDateTime.MAX.toLocalTime()));
+
+
+        //当前 localDateTime 转 字符串
         System.out.println(LocalDateTime.now().format(formatter));
+        //localDate 转 localDateTime
         System.out.println(localDateToLocalDateTime(LocalDate.now().minusDays(3)).format(formatter));
+
+        //获取最大/最小时间
+        System.out.println(LocalDateTime.MIN);
+        System.out.println(LocalDateTime.MAX);
 
         LocalDateTime a = LocalDateTime.of(LocalDate.now(), LocalDateTime.MIN.toLocalTime());
         LocalDateTime b = LocalDateTime.of(LocalDate.now(), LocalDateTime.MAX.toLocalTime());
