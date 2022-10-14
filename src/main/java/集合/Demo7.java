@@ -28,6 +28,8 @@ public class Demo7 {
         Student student2 = new Student("1","2","3",4);
         students.add(student2);
         System.out.println(students);
+        Object[] a = students.toArray(new Object[0]);
+        System.out.println(students.toArray(new Object[0]));
 
         String accounts = Joiner.on(",").join(students);
         System.out.println(accounts);

@@ -1,6 +1,9 @@
 package 时间;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -25,6 +28,14 @@ public class Demo9 {
 
         System.out.println(startTime);
         System.out.println(endTime);
+
+        //获取当天开始时间
+        LocalDateTime today_start = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
+        System.out.println(today_start);
+
+        //获取当天结束时间
+        LocalDateTime today_end = LocalDateTime.of(LocalDate.now(), LocalTime.MAX);
+        System.out.println(today_end);
 
     }
 }
