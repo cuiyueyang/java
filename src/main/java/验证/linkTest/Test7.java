@@ -7,6 +7,7 @@ import sun.misc.BASE64Encoder;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -19,14 +20,20 @@ import java.net.URL;
  **/
 public class Test7 {
     public static void main(String[] args) throws IOException {
+
+        Double a = Double.valueOf(8)/30;
+        System.out.println(a);
+
+        System.out.println(new BigDecimal(a).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue());
+
 //        Double a = 783.00;
 //        System.out.println(a.intValue());
 
-        String imgUrl = "https://zjjt.zhuji.gov.cn:9443/kkgcptoss/aila/jpg/bige5ab4f8d0c4a4fc8b67fbcc3d79854fc.jpg?Expires=1979569800&OSSAccessKeyId=stGWaQ5RYrc4Wkba&Signature=3vdRPG%2BaML%2F0Acirfbh1ROz%2FaVw%3D";
-        String base64 = ImageUtil.getImage(imgUrl);
-        String base65 = ImageUtil.getImageBase64Str(imgUrl);
-        String base66 = NetImageToBase64(imgUrl);
-        System.out.println(base64);
+//        String imgUrl = "https://zjjt.zhuji.gov.cn:9443/kkgcptoss/aila/jpg/bige5ab4f8d0c4a4fc8b67fbcc3d79854fc.jpg?Expires=1979569800&OSSAccessKeyId=stGWaQ5RYrc4Wkba&Signature=3vdRPG%2BaML%2F0Acirfbh1ROz%2FaVw%3D";
+//        String base64 = ImageUtil.getImage(imgUrl);
+//        String base65 = ImageUtil.getImageBase64Str(imgUrl);
+//        String base66 = NetImageToBase64(imgUrl);
+//        System.out.println(base64);
 
     }
 

@@ -27,6 +27,12 @@ public class Demo6 {
     }
 
     public static void main(String[] args) {
+        Date date = new Date();
+        Instant instant = date.toInstant();
+        ZoneId zoneId = ZoneId.systemDefault();
+        LocalDateTime date2 = instant.atZone(zoneId).toLocalDateTime();
+        System.out.println(date);
+        System.out.println(date2);
 
         System.out.println(LocalDateTime.of(LocalDate.parse("2022-08-01", formatterDay), LocalDateTime.MAX.toLocalTime()));
 
