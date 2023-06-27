@@ -1,5 +1,8 @@
 package 时间;
 
+import cn.hutool.core.date.DateUnit;
+import cn.hutool.core.date.DateUtil;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -27,6 +30,21 @@ public class Demo6 {
     }
 
     public static void main(String[] args) {
+        //获取localDateTime 最大值，最小值
+        LocalDateTime startTime = LocalDate.now().minusDays(30L).atStartOfDay();
+        System.out.println(startTime);
+        System.out.println(startTime.with(LocalTime.MAX));
+
+
+        //获取最大/最小时间
+        System.out.println(LocalDateTime.MIN);
+        System.out.println(LocalDateTime.MAX);
+
+        //date 转 localDateTime
+        LocalDateTime time1 = LocalDateTime.now();
+        Date date1 = Date.from( time1.atZone( ZoneId.systemDefault()).toInstant());
+        System.out.println(date1);
+
         Date date = new Date();
         Instant instant = date.toInstant();
         ZoneId zoneId = ZoneId.systemDefault();
@@ -42,9 +60,6 @@ public class Demo6 {
         //localDate 转 localDateTime
         System.out.println(localDateToLocalDateTime(LocalDate.now().minusDays(3)).format(formatter));
 
-        //获取最大/最小时间
-        System.out.println(LocalDateTime.MIN);
-        System.out.println(LocalDateTime.MAX);
 
         LocalDateTime a = LocalDateTime.of(LocalDate.now(), LocalDateTime.MIN.toLocalTime());
         LocalDateTime b = LocalDateTime.of(LocalDate.now(), LocalDateTime.MAX.toLocalTime());
@@ -60,9 +75,6 @@ public class Demo6 {
         System.out.println(LocalDateTime.of(LocalDate.now().minusDays(2), LocalDateTime.MIN.toLocalTime()).format(formatter));
         System.out.println(LocalDateTime.of(LocalDate.now(), LocalDateTime.MAX.toLocalTime()).format(formatter));
 
-        //获取localDateTime 最大值，最小值
-        LocalDateTime startTime = LocalDate.now().minusDays(30L).atStartOfDay();
-        System.out.println(startTime);
-        System.out.println(startTime.with(LocalTime.MAX));
+
     }
 }

@@ -2,6 +2,7 @@ package 时间;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -19,6 +20,10 @@ public class Test2 {
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
 
     public static void main(String[] args) {
+
+        Date date = Date.from( LocalDateTime.now().atZone( ZoneId.systemDefault()).toInstant());
+        System.out.println(date.toString());
+
         String str = "2022-07-28T12:43:50.725+08:00";
         String temp = str.substring(0, 23);
         LocalDateTime time = LocalDateTime.parse(temp);
