@@ -23,7 +23,7 @@ public class Demo11 {
         student1.setXh("2022-03-23 13:24:15");
         student1.setName("张三");
         student1.setAge(12);
-        student1.setBirthday(LocalDateTime.now().plusDays(1));
+        student1.setBirthday(LocalDateTime.now().minusDays(1));
         Student student2 = new Student();
         student2.setId("002");
         student2.setXh("2021-03-23 13:24:15");
@@ -34,7 +34,8 @@ public class Demo11 {
         studentList.add(student2);
 //        Stream<Student> studentStream = studentList.stream();
 //        studentStream.sorted((o1,o2) -> o1.getAge()-o2.getAge()).forEach(x -> System.out.println(x.getName()));
-        studentList.sort((x,y) -> y.getXh().compareTo(x.getXh()));
+//        studentList.sort((x,y) -> y.getAge().compareTo(x.getAge()));
+        studentList.sort((x,y) -> y.getBirthday().compareTo(x.getBirthday()));
         studentList.forEach(x ->{
             System.out.println(x.getName());
         });

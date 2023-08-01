@@ -3,6 +3,7 @@ package 时间;
 import cn.hutool.core.date.DateUtil;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
@@ -18,7 +19,7 @@ public class Demo3 {
     private static ZoneId zone = ZoneId.systemDefault();
     public static void main(String[] args) {
 
-
+        LocalDateTime cs = LocalDate.now().atStartOfDay();
 
         LocalDateTime startTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(1685953876000L), zone);
 

@@ -20,7 +20,7 @@ public class Student {
     /**姓名*/
     private String name;
     /**年龄*/
-    private int age;
+    private Integer age;
     /**生日*/
     private LocalDateTime birthday;
     private List<HazardBillDTO> hazardBillDTOS;

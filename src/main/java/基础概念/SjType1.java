@@ -15,8 +15,8 @@ public class SjType1 {
     static DecimalFormat df  = new DecimalFormat("#.00");
 
     public static void main(String[] args) {
-        int a = 1081;
-        int b = 10000;
+        int a = 1;
+        int b = 3;
         Double c = Double.valueOf(a*100) / Double.valueOf(b);
         System.out.println(c);
         System.out.println(df.format(c) + "%");
