@@ -1,5 +1,7 @@
 package 时间;
 
+import cn.hutool.Hutool;
+
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -18,30 +20,31 @@ public class Demo5 {
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
+
     public static void main(String[] args) {
+
         //获取当前时时间戳
         System.out.println(System.currentTimeMillis());
+
         //时间戳转化为时间
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-        long a = 1672804216000L;
+        long a = 1692224919000L;
         System.out.println(sdf.format(a));
+        System.out.println(getDateTimeOfTimestamp(a));
+
+        String str = "2022-01-01 00:00:00";
+
+        String cs = "2021-07-19 00:00:00.0";
+        System.out.println(LocalDateTime.parse(cs.substring(0, 19), formatter));
 
         long b = 1672804216000L;
         System.out.println(sdf.format(b));
-
-        System.out.println(getDateTimeOfTimestamp(a));
-
 
         System.out.println(LocalDateTime.now().toString());
 
         System.out.println(Calendar.getInstance().getTimeInMillis());
 
         System.out.println(sdf.format(System.currentTimeMillis()));
-
-
-        String str = "2022-01-01 00:00:00";
-        System.out.println(LocalDateTime.parse(str, formatter));
 
         String nowMonth = String.valueOf(LocalDateTime.now().getMonth().getValue());
         System.out.println(nowMonth);
