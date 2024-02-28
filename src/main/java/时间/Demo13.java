@@ -3,7 +3,7 @@ package 时间;
 import java.util.Date;
 
 /**
- * <p>Description: </p>
+ * <p>Description: 时间差</p>
  * <p>Date: 2023/06/26 11:29</p>
  *
  * @author cuiyy

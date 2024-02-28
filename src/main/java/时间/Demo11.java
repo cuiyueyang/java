@@ -4,6 +4,7 @@ import cn.hutool.core.date.DateUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -25,7 +26,17 @@ public class Demo11 {
         LocalDateTime localDateTime =LocalDateTime.now();
         Date date = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
         String format = DateUtil.format(date, df);
-        System.err.println(format);
+        System.out.println(format);
+
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDate = LocalDate.now();
+        String localDateStr = localDate.format(fmt1);
+        System.out.println(localDateStr);
+
+        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String dateStr = "2021-08-19";
+        LocalDate date2 = LocalDate.parse(dateStr, fmt2);
+        System.out.println(date2);
 
 //        2023-04-23T16:05:38.193CST;
 //        2017-06-15T00:00:00.000+08:00;
