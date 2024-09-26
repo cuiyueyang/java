@@ -8,9 +8,13 @@ import java.io.PipedOutputStream;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo7 {
-    //PipedOutputStream PipedInputStream 管道流
-    //对管道进行处理的流节点
-    //java中可以用于线层之间的通信
+
+    /**
+     * PipedOutputStream PipedInputStream 管道流
+     * 对管道进行处理的流节点
+     * java中可以用于线程之间的通信
+     */
+
     public static void main(String[] args) {
         final PipedOutputStream output = new PipedOutputStream();
         final PipedInputStream input = new PipedInputStream();

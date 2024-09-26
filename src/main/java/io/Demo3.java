@@ -7,8 +7,12 @@ import java.io.*;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo3 {
-    //FileReader FilWriter  文件流
-    //直接操作文件与os底层交互，也被称作节点流
+
+    /**
+     * FileReader FilWriter  文件流
+     * 直接操作文件与os底层交互，也被称作节点流
+     */
+
     public static void main(String[] args) throws IOException {
         Reader reader = null;
         Writer writer = null;

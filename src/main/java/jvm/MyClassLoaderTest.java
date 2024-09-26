@@ -54,7 +54,7 @@ public class MyClassLoaderTest {
                         // to find the class.
                         long t1 = System.nanoTime();
 
-                        if (!name.startsWith("Entity")) {
+                        if (!name.startsWith("entity")) {
                             c = this.getParent().loadClass(name);
                         } else {
                             c = findClass(name);
@@ -76,7 +76,7 @@ public class MyClassLoaderTest {
         public static void main(String[] args) throws Exception {
             //初始化自定义类加载器，会先初始化父类ClassLoader，其中会把自定义类加载器的父加载器设置为应用程序类加载器AppClassLoader
             MyClassLoader classLoader = new MyClassLoader("F:\\temp");
-            Class clazz = classLoader.loadClass("Entity.Student");
+            Class clazz = classLoader.loadClass("entity.Student");
             Object obj = clazz.newInstance();
             Method method = clazz.getDeclaredMethod("toString", null);
             method.invoke(obj, null);

@@ -8,7 +8,11 @@ import java.io.PushbackReader;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo9 {
-    //pushbackReader 继承reader抽象类
+
+    /**
+     * pushbackReader 继承reader抽象类
+     */
+
     public static void main(String[] args) {
         try(PushbackReader pr = new PushbackReader(new FileReader("F:/workspace/io/FileInputStreamTest.txt"),64)){
             char[] buf = new char[32];

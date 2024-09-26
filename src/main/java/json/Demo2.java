@@ -1,6 +1,6 @@
 package json;
 
-import Entity.Student;
+import entity.Student;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 

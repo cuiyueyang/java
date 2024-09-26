@@ -8,9 +8,13 @@ import java.io.RandomAccessFile;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo6 {
-    //RandomAccessFile
-    //RandomAccessFile 是java.io中的一个特殊的类，既不是输入流也不是输出流，它两者都可以做到，
-    //支持对文件的随机访问
+
+    /**
+     * RandomAccessFile
+     * RandomAccessFile 是java.io中的一个特殊的类，既不是输入流也不是输出流，它两者都可以做到，
+     * 支持对文件的随机访问
+     */
+
     public static void main(String[] args) throws IOException {
         RandomAccessFile randomAccessFile = null;
         try{

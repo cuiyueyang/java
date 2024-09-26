@@ -8,8 +8,12 @@ import java.io.StringWriter;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo4 {
-    //StringReader StringWriter 字符串流
-    //StringReader能从String中读取数据并保存到char数组
+
+    /**
+     * StringReader StringWriter 字符串流
+     * StringReader能从String中读取数据并保存到char数组
+     */
+
     public static void main(String[] args) throws IOException {
         StringReader sr = null;
         StringWriter sw = null;

@@ -9,8 +9,12 @@ import java.io.SequenceInputStream;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo8 {
-    //SequenceInputStream
-    //可以当作一个工具类，将两个或者多个输入流当作一个输入流依次读取
+
+    /**
+     * SequenceInputStream
+     * 可以当作一个工具类，将两个或者多个输入流当作一个输入流依次读取
+     */
+
     public static void main(String[] args) throws IOException {
         FileInputStream firstream1 = null;
         FileInputStream firstream2 = null;

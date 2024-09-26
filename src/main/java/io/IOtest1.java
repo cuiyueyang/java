@@ -8,6 +8,7 @@ import java.io.IOException;
  * File的操作
  */
 public class IOtest1 {
+
     public static void main(String[] args) {
         //在D盘定义一个新文件test.txtE
         File file = new File("E:"+File.separator+"test.txt");
@@ -22,4 +23,5 @@ public class IOtest1 {
             }
         }
     }
+
 }

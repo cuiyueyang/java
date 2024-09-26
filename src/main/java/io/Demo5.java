@@ -7,8 +7,11 @@ import java.io.*;
  * Created by cuiyueyang on 2020/5/28.
  */
 public class Demo5 {
-    //FileInputStream reader  文件流
-    //直接操作文件，直接与os系统底层交互，因此也被称为节点流
+
+    /**
+     * FileInputStream reader  文件流
+     * 直接操作文件，直接与os系统底层交互，因此也被称为节点流
+     */
     public static void main(String[] args) throws IOException {
         InputStream is = null;
         Reader reader = null;
